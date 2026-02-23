@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mental Support | You Are Not Alone</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background: linear-gradient(135deg, #667eea, #764ba2);
+color:white;
+min-height:100vh;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+
+background: rgba(0,0,0,0.2);
+backdrop-filter: blur(10px);
+
+position:sticky;
+top:0;
+z-index:1000;
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-size:22px;
+font-weight:bold;
+
+}
+
+.logo img{
+
+width:40px;
+height:40px;
+
+}
+
+.nav-links{
+
+display:flex;
+gap:25px;
+
+}
+
+.nav-links a{
+
+color:white;
+text-decoration:none;
+font-size:16px;
+
+transition:0.3s;
+
+}
+
+.nav-links a:hover{
+
+color:#00ffd5;
+transform:translateY(-2px);
+
+}
+
+
+/* ===== HERO ===== */
+
+.hero{
+
+text-align:center;
+padding:80px 20px;
+
+}
+
+.hero h1{
+
+font-size:45px;
+margin-bottom:15px;
+
+}
+
+.hero p{
+
+font-size:18px;
+opacity:0.9;
+
+margin-bottom:25px;
+
+}
+
+.hero button{
+
+padding:14px 30px;
+
+border:none;
+border-radius:30px;
+
+background: linear-gradient(45deg,#00ffd5,#00bfff);
+
+color:black;
+font-size:16px;
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.hero button:hover{
+
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,255,213,0.6);
+
+}
+
+
+/* ===== PLANS ===== */
+
+.plans{
+
+padding:50px 20px;
+
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+
+max-width:1200px;
+margin:auto;
+
+}
+
+.plan{
+
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+
+padding:25px;
+
+border-radius:15px;
+
+width:260px;
+
+text-align:center;
+
+transition:0.3s;
+
+position:relative;
+
+}
+
+.plan:hover{
+
+transform:translateY(-10px) scale(1.02);
+box-shadow:0 0 30px rgba(0,0,0,0.5);
+
+}
+
+.plan h3{
+
+margin-bottom:10px;
+
+}
+
+.plan .price{
+
+font-size:26px;
+margin-bottom:10px;
+
+color:#00ffd5;
+
+}
+
+.plan p{
+
+opacity:0.8;
+margin-bottom:15px;
+font-size:14px;
+
+}
+
+.plan button{
+
+padding:10px 20px;
+
+border:none;
+border-radius:20px;
+
+background: linear-gradient(45deg,#00ffd5,#00bfff);
+
+color:black;
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.plan button:hover{
+
+transform:scale(1.05);
+
+}
+
+
+/* ===== BADGE ===== */
+
+.badge{
+
+position:absolute;
+top:-10px;
+right:-10px;
+
+background:#00ffd5;
+color:black;
+
+padding:5px 10px;
+
+border-radius:10px;
+
+font-size:12px;
+font-weight:bold;
+
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer{
+
+text-align:center;
+padding:20px;
+
+background: rgba(0,0,0,0.3);
+
+margin-top:40px;
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:15px 20px;
+
+}
+
+.hero h1{
+
+font-size:30px;
+
+}
+
+.plans{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="assets/images/logo.png">
+
+The Empathy Line
+
+</div>
+
+<div class="nav-links">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="booking.html">Book</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ===== HERO ===== -->
+
+<div class="hero">
+
+<h1>You Are Not Alone</h1>
+
+<p>We provide a safe and private space where you can share your feelings freely.</p>
+
+<button onclick="goToBooking()">
+Book a Session
+</button>
+
+</div>
+
+
+
+<!-- ===== PLANS ===== -->
+
+<div class="plans">
+
+
+<div class="plan">
+
+<h3>1 Hour Session</h3>
+
+<div class="price">₹499</div>
+
+<p>Single private emotional support session</p>
+
+<button onclick="selectPlan('1 Hour Session','499')">
+Book Now
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<h3>2 Hour Session</h3>
+
+<div class="price">₹899</div>
+
+<p>Extended deep emotional support session</p>
+
+<button onclick="selectPlan('2 Hour Session','899')">
+Book Now
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<h3>3 Hour Session</h3>
+
+<div class="price">₹1299</div>
+
+<p>Long session for deeper conversation</p>
+
+<button onclick="selectPlan('3 Hour Session','1299')">
+Book Now
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<h3>Weekly Subscription</h3>
+
+<div class="price">₹1999</div>
+
+<p>5 private sessions per week (1 hour each)</p>
+
+<button onclick="selectPlan('Weekly Subscription','1999')">
+Subscribe
+</button>
+
+</div>
+
+
+
+<div class="plan">
+
+<div class="badge">MOST POPULAR</div>
+
+<h3>Monthly Subscription</h3>
+
+<div class="price">₹5999</div>
+
+<p>15 private sessions for full month support</p>
+
+<button onclick="selectPlan('Monthly Subscription','5999')">
+Subscribe
+</button>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<div class="footer">
+
+© 2026 Ardhanagini Photography & Co | All Rights Reserved
+
+</div>
+
+
+
+<!-- ===== SCRIPT ===== -->
+
+<script>
+
+function goToBooking(){
+
+window.location.href="booking.html";
+
+}
+
+function selectPlan(name, price){
+
+localStorage.setItem("planName", name);
+localStorage.setItem("planPrice", price);
+
+window.location.href="booking.html";
+
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking Successful | Mental Support</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+background: linear-gradient(135deg, #667eea, #764ba2);
+color:white;
+
+display:flex;
+flex-direction:column;
+
+min-height:100vh;
+
+}
+
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:15px 40px;
+
+background: rgba(0,0,0,0.2);
+backdrop-filter: blur(10px);
+
+}
+
+.logo{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+font-size:22px;
+font-weight:bold;
+
+}
+
+.logo img{
+
+width:40px;
+height:40px;
+
+}
+
+
+/* ===== SUCCESS BOX ===== */
+
+.container{
+
+flex:1;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+}
+
+.success-box{
+
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(15px);
+
+padding:40px;
+
+border-radius:15px;
+
+text-align:center;
+
+max-width:420px;
+width:100%;
+
+box-shadow:0 0 25px rgba(0,0,0,0.4);
+
+animation: fadeIn 0.6s ease;
+
+}
+
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(20px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+/* ===== SUCCESS ICON ===== */
+
+.success-icon{
+
+font-size:60px;
+
+color:#00ffd5;
+
+margin-bottom:15px;
+
+animation: pop 0.5s ease;
+
+}
+
+@keyframes pop{
+
+0%{transform:scale(0.5);}
+100%{transform:scale(1);}
+
+}
+
+
+/* ===== TEXT ===== */
+
+.success-box h2{
+
+margin-bottom:10px;
+
+}
+
+.success-box p{
+
+opacity:0.9;
+margin-bottom:20px;
+
+}
+
+
+/* ===== BUTTON ===== */
+
+button{
+
+padding:12px 25px;
+
+border:none;
+border-radius:30px;
+
+background: linear-gradient(45deg,#00ffd5,#00bfff);
+
+color:black;
+
+font-weight:bold;
+font-size:16px;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+box-shadow:0 0 20px rgba(0,255,213,0.6);
+
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer{
+
+text-align:center;
+padding:15px;
+
+background: rgba(0,0,0,0.2);
+
+}
+
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+.navbar{
+
+padding:15px 20px;
+
+}
+
+.success-box{
+
+padding:30px;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+<!-- ===== NAVBAR ===== -->
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="assets/images/logo.png">
+
+Mental Support
+
+</div>
+
+</div>
+
+
+
+<!-- ===== SUCCESS CONTENT ===== -->
+
+<div class="container">
+
+<div class="success-box">
+
+
+<div class="success-icon">
+
+✓
+
+</div>
+
+
+<h2>Booking Successful</h2>
+
+<p>
+
+Your session has been booked successfully.<br>
+
+We will contact you at your selected time via phone.
+
+Payment confirmation will be handled in real-time during the scheduled call.
+</p>
+
+
+<button onclick="goHome()">
+
+Back to Home
+
+</button>
+
+
+</div>
+
+</div>
+
+
+
+<!-- ===== FOOTER ===== -->
+
+<div class="footer">
+
+© 2026 Ardhanagini Photography & Co | All Rights Reserved
+
+</div>
+
+
+
+<!-- ===== SCRIPT ===== -->
+
+<script>
+
+function goHome(){
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+
+</body>
+</html>
